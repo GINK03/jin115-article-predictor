@@ -10,8 +10,11 @@ import glob
 import MeCab
 
 m = MeCab.Tagger('-Owakati')
-for name in glob.glob('contents/*'):
-
+files =  glob.glob('contents/*')
+size = len(files)
+for index, name in enumerate(files):
+  if index%100 == 0:
+    print('now iter', index, '/', size, name)
   save_name = 'wakati/' + name.split('/').pop()
 
   if os.path.exists(save_name) is True:

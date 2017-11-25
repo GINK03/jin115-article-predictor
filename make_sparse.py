@@ -36,9 +36,16 @@ if '--sparse' in sys.argv:
   ftrain = open('dataset.train', 'w')
   ftest  = open('dataset.test', 'w')
   for name in glob.glob('wakati/*'):
+    # filter #comment_list's url
+    if '#comment_list' in name: continue
     c = pickle.loads( gzip.decompress( open(name, 'rb').read() ) )
 
-    comment = re.search(r'（(\d{1,})）', c['comment']).group(1)
+    comment = int( re.search(r'（(\d{1,})）', c['comment']).group(1) )
+    try:
+      comment = math.log(comment)
+    except Exception:
+      continue
+    print( comment )
     base = [ term_index['comment@%s'%term] for term in c['comment'] ]
     base.extend( [ term_index['article@%s'%term] for term in c['article'] ] )
      
