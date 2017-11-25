@@ -24,7 +24,7 @@ if '--terms' in sys.argv:
       c = pickle.loads( gzip.decompress( open(name, 'rb').read() ) )
     except Exception:
       continue
-    [ terms.add('comment@%s'%term) for term in c['comment'] ]
+    [ terms.add('h1@%s'%term) for term in c['h1'] ]
     [ terms.add('article@%s'%term) for term in c['article'] ]
     [ terms.add('%s'%term) for term in c['time'] ]
   open('temps/terms.json', 'w').write( json.dumps(list(terms), indent=2, ensure_ascii=False) )
