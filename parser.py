@@ -49,7 +49,7 @@ if '--map1' in sys.argv:
       print('finished', link)
   
   names = [name for name in glob.glob('../squid-config-dotfile/exmaple/htmls/*')]
-  with concurrent.futures.ProcessPoolExecutor(max_workers=16) as exe:
+  with concurrent.futures.ProcessPoolExecutor(max_workers=32) as exe:
     exe.map( _map1, names)
 
 
