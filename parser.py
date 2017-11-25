@@ -63,8 +63,9 @@ if '--map1' in sys.argv:
         contents['comment'] = comment.text.replace('\n', '') 
         contents['article'] = re.sub(r'\n{1,}', ' ', article.text) 
         contents['time'] = time
-        
-        #print( contents )
+       
+        if random.random() < 0.1:
+          print( contents )
         open(save_name, 'wb').write( gzip.compress(pickle.dumps(contents) ) )
         print('finished', link)
     except Exception as e:

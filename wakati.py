@@ -9,6 +9,7 @@ import glob
 
 import MeCab
 
+import re
 m = MeCab.Tagger('-Owakati')
 files =  glob.glob('contents/*')
 size = len(files)
@@ -22,7 +23,9 @@ for index, name in enumerate(files):
   c = pickle.loads( gzip.decompress( open(name, 'rb').read() ) )
   c['h1'] = m.parse( c['h1'] ).strip().split()
   c['article'] = m.parse( c['article'] ).strip().split()
-  #print( c )
+  c['time'] = ['time@%s'%t for t in re.sub(r'([年|月|日])', r'\1 ', re.sub(r'\d\d:\d\d', '', c['time']) ).split() ]
+  
+  print( c )
 
   open(save_name, 'wb').write( gzip.compress(pickle.dumps(c))  )
   print(save_name)
