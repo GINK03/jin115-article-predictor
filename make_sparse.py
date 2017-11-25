@@ -53,7 +53,7 @@ if '--sparse' in sys.argv:
     except Exception:
       continue
     print( comment )
-    base = [ term_index['comment@%s'%term] for term in c['comment'] ]
+    base = [ term_index['h1@%s'%term] for term in c['h1'] ]
     base.extend( [ term_index['article@%s'%term] for term in c['article'] ] )
     base.extend( [ term_index['%s'%term] for term in c['time'] ] )
      

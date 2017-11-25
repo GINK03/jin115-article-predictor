@@ -11,9 +11,11 @@ import MeCab
 
 import re
 
+import random
 if '--verb' in sys.argv:
   m = MeCab.Tagger('-Ochasen')
   files =  glob.glob('contents/*')
+  random.shuffle(files)
   size = len(files)
   def _verb( text ):
     tmp =  []
