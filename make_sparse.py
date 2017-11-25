@@ -19,8 +19,11 @@ import re
 import random
 if '--terms' in sys.argv:
   terms = set()
-  for name in glob.glob('wakati/*'):
-    c = pickle.loads( gzip.decompress( open(name, 'rb').read() ) )
+  for name in glob.glob('wakati-verbs/*'):
+    try:
+      c = pickle.loads( gzip.decompress( open(name, 'rb').read() ) )
+    except Exception:
+      continue
     [ terms.add('comment@%s'%term) for term in c['comment'] ]
     [ terms.add('article@%s'%term) for term in c['article'] ]
     [ terms.add('%s'%term) for term in c['time'] ]
@@ -36,10 +39,13 @@ if '--sparse' in sys.argv:
   term_index = json.loads( open('temps/term_index.json').read() )
   ftrain = open('dataset.train', 'w')
   ftest  = open('dataset.test', 'w')
-  for name in glob.glob('wakati/*'):
+  for name in glob.glob('wakati-verbs/*'):
     # filter #comment_list's url
     if '#comment_list' in name: continue
-    c = pickle.loads( gzip.decompress( open(name, 'rb').read() ) )
+    try:
+      c = pickle.loads( gzip.decompress( open(name, 'rb').read() ) )
+    except Exception:
+      continue
 
     comment = int( re.search(r'（(\d{1,})）', c['comment']).group(1) )
     try:

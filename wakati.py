@@ -35,6 +35,7 @@ if '--verb' in sys.argv:
     c = pickle.loads( gzip.decompress( open(name, 'rb').read() ) )
     c['h1'] = _verb( c['h1'] )
     c['article'] = _verb( c['article'] )
+    c['comment'] = _verb( c['comment'] )
     c['time'] = ['time@%s'%t for t in re.sub(r'([年|月|日])', r'\1 ', re.sub(r'\d\d:\d\d', '', c['time']) ).split() ]
     
 
