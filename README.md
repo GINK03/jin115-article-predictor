@@ -55,3 +55,7 @@ $
 $ lightgbm config=train.conf
 ```
 (LightGBMのインストールは、[Github](https://github.com/Microsoft/LightGBM)からcloneして、cmake, make & sudo make installでシステムパスに追加しておくと便利です)
+
+**特徴量重要度を確認する**  
+Gradient Boosting Machine系の特徴量重要度は、必ずしも、事象を説明する特徴量が支配的に記述されるわけではないのですが、どんな特徴量が効いているのか参考適度になります。  
+また、今回、どんな単語をアーティクルやタイトルに記述されていれば、KPIが向上するのかの選択候補を与えるために、これらの特徴量重要度が高い候補のものから与えます
