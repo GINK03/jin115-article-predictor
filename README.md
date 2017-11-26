@@ -24,7 +24,7 @@ $ wget https://storage.googleapis.com/nardtree/jin115-20171125/jin115-20171125.z
 
 ダウンロード済みのhtmlコンテンツから予想の元となる説明変数（article, title, date）と、目的変数であるcomment数をパースします　　
 
-この捜査自体が極めて重いので、[Google Data Strageからもダウンロード]()できます　　
+この捜査自体が極めて重いので、[Google Data Strageからもダウンロード](https://storage.googleapis.com/nardtree/jin115-20171125/contents.zip)できます　　
 
 ```console
 $ python3 parser.py --map1
