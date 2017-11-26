@@ -37,3 +37,13 @@ $ python3 parser.py --map1
 ```console
 $ python3 wakati.py --all
 ```
+
+**LightGBM, XGBoostで機械学習可能なデータセット(train, test)を作成します
+
+まず最初に、予想するとしたKPIであるコメント数を予想するもモデルを構築することを目的とします　　
+
+そのために、トレインとテストのデータセットを分割して、表現します
+そのために、KPI
+そのために、KPI
+```Kピ
+```
