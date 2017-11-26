@@ -10,25 +10,31 @@ term_freq = json.loads( open('term_freq.json').read() )
 
 terms = json.loads( open('usable_terms.json').read() )
 
-count = 0
 count_merge = {}
-for i in range(len(terms)):
-  for j in range(len(terms)):
-    for k in range(len(terms)):
-      merge = [terms[i], terms[j], terms[k]] 
-      count_merge[count] = merge
-      count+=1
+import random
+for i in range(100000):
+  merge = [ random.choice(terms) for j in range(3) ]
+  count_merge[i] = merge
 
 term_index = json.loads( open('../temps/term_index.json').read() )
-
 import copy
-for count, merge in count_merge.items():
+import math
+
+# base
+open('baseline.dat', 'w').write( '0.0 ' + ' '.join(  [ '%d:%f'%(term_index[term], math.log(freq+1)) for term, freq in term_freq.items() if term_index.get(term) is not None ]  ) )
+
+
+for count, merge in sorted( count_merge.items(), key=lambda x:x[0]):
   temp = copy.copy(term_freq)
   for term in merge:
+    if temp.get(term) is None:
+      temp[term] = 0.0
     temp[term] += 1
 
-  temp = { term:math.log(freq+1) for term, freq in copy.copy(temp.items())  }
+  temp = { term:math.log(freq+1) for term, freq in temp.items() }
 
-  formula = ' '.join( ['%d:%f'%(term_index[term], freq) for term, freq in temp.items()] )
-  print( '0.0 ' + formula ) 
+  
+  formula = ' '.join( ['%d:%f'%(term_index[term], freq) for term, freq in sorted(temp.items(), key=lambda x:x[0]) if term_index.get(term) is not None] )
+  print( '0 ' + formula ) 
 
+open('count_merge.json', 'w').write( json.dumps( sorted( count_merge.items(), key=lambda x:x[0]), indent=2, ensure_ascii=False ) )
