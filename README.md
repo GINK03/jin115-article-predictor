@@ -89,6 +89,13 @@ liblinearや単純な重回帰では、「もちもち」は単独の特徴量�
 
 Gradient Boosting MachineやDeep Learningなどは、内部的に組み合わせ表現を多角的に獲得可能なので、「美容」のクリエイティブを作成している時に、「美容」という制約が入った状態で、最適などの単語を使うべきかをレコメンド可能になります  
 
+**KPIを予想するモデルを移動する**  
+
+```console
+$ mv LightGBM_model.txt best-term-combination-search/
+$ cd best-term-combination-search/
+```
+
 **元となるテキストをベクトル化する**  
 デフォルトでは、学習データセットに用いなかったjin115.comの最新の記事を参照するようにしていますが、適宜必要なデータセットに変えてください
 ```console
