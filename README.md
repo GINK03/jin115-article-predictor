@@ -107,6 +107,22 @@ $ python3 calc_combinations.py  > dump.dat
 $ python3 upper_calc.py | less
 ```
 (この例では、コメントするユーザのハッシュ値も予想の重要な特徴量になってしまっているので、名詞のみのモデルでランキングしています)
-
+具体例  
+やはり、2chねらーとTwitterユーザは仲が悪のか、Twitterネタは炎上しやすい感じでした 
+三つの単語を用いた記事だと、左側のぶんだけ、KPIであるコメント投稿数が上がると期待されます  
+```json
+article@頂点 article@SCEJ article@バリュー 354.4107576417173
+article@マジモン article@東方 article@板 353.46575634371357
+article@pr h1@ツイッター民 article@543 348.5449500051823
+h1@バカッター article@老害 article@5W 345.9868295939084
+article@商業 article@肯定 h1@ツイッター民 337.3307174323563
+h1@ファイナルファンタジー15 article@安倍晋三 article@一位 330.16779109936283
+article@2月27日 article@年収 h1@ツイッター民 315.97116550315286
+article@ネトウヨ article@ただ h1@爆死 313.42247907534056
+article@570 article@2013年 h1@ツイッター民 308.77429368376124
+article@暗殺 h1@バカッター h1@赤字 304.52876971810906
+article@ロゴ article@熊本県 h1@バカッター 302.28776850940653
+h1@ソニー article@ガム h1@ツイッター民 294.8744340111921
+```
 ## 参考文献
 - [1] [www.ibm.chefwatson.com](https://www.ibmchefwatson.com/tupler#tupler%2F2305-0255-01624-01005%2F%2F%2F%2F%2F%2F0)
