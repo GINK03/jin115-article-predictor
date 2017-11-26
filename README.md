@@ -110,6 +110,7 @@ $ python3 upper_calc.py | less
 具体例  
 やはり、2chねらーとTwitterユーザは仲が悪のか、Twitterネタは炎上しやすい感じでした 
 三つの単語を用いた記事だと、左側のぶんだけ、KPIであるコメント投稿数が上がると期待されます  
+**articleはコンテンツ中, h1は記事のタイトル中に含まれているべき単語です**
 ```json
 article@頂点 article@SCEJ article@バリュー 354.4107576417173
 article@マジモン article@東方 article@板 353.46575634371357
@@ -123,6 +124,27 @@ article@570 article@2013年 h1@ツイッター民 308.77429368376124
 article@暗殺 h1@バカッター h1@赤字 304.52876971810906
 article@ロゴ article@熊本県 h1@バカッター 302.28776850940653
 h1@ソニー article@ガム h1@ツイッター民 294.8744340111921
+```  
+では、KPIが下がってしまうようなコンテンツの組み合わせにするには、どんな単語にすればいいのでしょうか
+```json
+article@テキスト article@デュラララ!! article@ドラマ -189.53177862790812
+article@tenki h1@黒子のバスケ article@動向 -190.51400300682553
+article@気象庁 article@165 h1@プロジェクト -190.59643895049328
+h1@配信決定 article@30代 article@コンピュータ -190.85115503750387
+article@3月20日 article@グランツーリスモSPORT article@舞台化 -191.62621800299712
+article@怪獣 article@太鼓の達人 article@MP -191.65833548081196
+article@子会社 article@DMM h1@2012 -192.6149488251317
+article@逮捕 article@簡単 h1@2012 -193.43026190229068
+article@カオス h1@配信決定 article@机 -194.11086374900992 
+article@売却 article@ギズモード・ジャパン article@新テニスの王子様 -194.42483360420647
+article@ロケットニュース24 article@故郷 article@2005年 -194.87825375720115
+h1@配信決定 article@音声 article@オンラインサービス -195.4315454292838
+article@情報番組 h1@無料配信 article@よ -196.20890731778456
+article@狂気 h1@2012 article@人間関係 -196.5040631720508
+article@PS4 article@年寄り h1@2012 -197.5578885851079
+article@アイドルマスター ミリオンライブ! h1@C article@Sony Computer Entertainment -198.7143092931767
 ```
+一部の作品や層を狙った文章にすると、KPIが下がるとかそういうことだと思います  
+
 ## 参考文献
 - [1] [www.ibm.chefwatson.com](https://www.ibmchefwatson.com/tupler#tupler%2F2305-0255-01624-01005%2F%2F%2F%2F%2F%2F0)
