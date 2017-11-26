@@ -38,10 +38,20 @@ $ python3 parser.py --map1
 $ python3 wakati.py --all
 ```
 
-**LightGBM, XGBoostで機械学習可能なデータセット(train, test)を作成します
+**LightGBM, XGBoostで機械学習可能なデータセット(train, test)を作成します**  
 
 まず最初に、予想するとしたKPIであるコメント数を予想するもモデルを構築することを目的とします　　
 
 そのために、トレインとテストのデータセットを分割して、作成します
-```Kピ
+```console
+$ python3 make_sparse.py --terms # uniq単語をカウント
+$ 
 ```
+
+**LightGBMで学習して、モデルを作成します**  
+一般的に、言語のBoWは単語数に応じたベクトル時原まで拡大されますので、numpyなどで密行列で表現することには向いていません  
+そのため、デフォルトでスパースマトリックスを扱え、CUI経由で学習できるLightGBMのバイナリを直接実行してモデルを作成します  
+```console
+$ lightgbm config=train.conf
+```
+(LightGBMのインストールは、[Github](https://github.com/Microsoft/LightGBM)からcloneして、cmake, make & sudo make installでシステムパスに追加しておくと便利です)
