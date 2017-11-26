@@ -92,3 +92,8 @@ $ python3 check_importance.py
 ```console
 $ python3 calc_combinations.py  > dump.dat
 ```
+
+**前処理で学習したモデルを利用して、KPI増加量が多い単語の組み合わせ表現を、昇順でランキングします**  
+```console
+$ python3 upper_calc.py | less
+```
