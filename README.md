@@ -13,8 +13,9 @@ jin115.comでは、2chまとめが流行った時に大量のアクセスを受�
 
 ## 前処理
 
-**データセットダウンロード**
-Google Cloud Strageに大容量のスクレイピング済みのデータセットを
+**データセットダウンロード**　　
+[Google Cloud Strageに大容量のスクレイピング済みのデータセットをzip圧縮したもの](https://storage.googleapis.com/nardtree/jin115-20171125)がありので、追試等が必要な方は参照してください。
+
 
 **htmlコンテンツから必要なarticle, commentの数, 日時, タイトル**
 
