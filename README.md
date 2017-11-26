@@ -20,5 +20,8 @@ jin115.comでは、2chまとめが流行った時に大量のアクセスを受�
 $ wget https://storage.googleapis.com/nardtree/jin115-20171125/jin115-20171125.zip
 ```
 
-**htmlコンテンツから必要なarticle, commentの数, 日時, タイトル**
+**htmlコンテンツから必要なarticle, commentの数, 日時, タイトルのパース**  
+
+ダウンロード済みのhtmlコンテンツから予想の元となる説明変数（article, title, date）と、目的変数であるcomment数をパースします　　
+
 
