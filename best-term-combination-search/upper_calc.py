@@ -28,4 +28,4 @@ for weight, (count, merge) in zip(weights, cmerge):
   merge_weight[terms] = weight
 
 for merge, weight in sorted(merge_weight.items(), key=lambda x:x[1]*-1):
-  print( merge, weight)
+  print( ' '.join(merge), weight)
