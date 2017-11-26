@@ -30,7 +30,8 @@ $ wget https://storage.googleapis.com/nardtree/jin115-20171125/jin115-20171125.z
 $ python3 parser.py --map1
 ```
 
-**パースしたデータを分かち書きします**
+**パースしたデータを分かち書きします**  
+
 分かち書きして、形態素解析して、BoWとしてベクトル表現にできる状態にします  
 
 ```console
