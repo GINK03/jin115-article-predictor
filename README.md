@@ -80,3 +80,15 @@ Gradient Boosting MachineやDeep Learningなどは、内部的に組み合わせ
 ```console
 $ python3 make_init.py
 ```
+
+**モデルで判別するために獲得された単語群を作成する**
+この単語があるから、KPIが変わった、という単語の一覧を得て、その単語群を組み合わせることで、よくなるのか、悪くなるか計算することができます  
+```console
+$ python3 check_importance.py
+```
+
+**単語群を利用して、ランダムの組み合わせ表現100,000通りを作成する**  
+レコメンドの候補となる単語群の組み合わせ10万通りを計算して、データセットを作成します  
+```console
+$ python3 calc_combinations.py  > dump.dat
+```
