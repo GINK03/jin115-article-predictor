@@ -97,3 +97,4 @@ $ python3 calc_combinations.py  > dump.dat
 ```console
 $ python3 upper_calc.py | less
 ```
+(この例では、コメントするユーザのハッシュ値も予想の重要な特徴量になってしまっているので、名詞のみのモデルでランキングしています)
