@@ -40,6 +40,12 @@ jin115.comでは、2chまとめが流行った時に大量のアクセスを受�
 **データセットダウンロード**  
 
 [Google Cloud Strageに大容量のスクレイピング済みのデータセットをzip圧縮したもの](https://storage.googleapis.com/nardtree/jin115-20171125/jin115-20171125.zip)がありので、追試等が必要な方は参照してください。
+- [contents.tar.bz2](https://storage.googleapis.com/nardtree/jin115-20171125/contents.tar.bz2)
+- [contents.zip](https://storage.googleapis.com/nardtree/jin115-20171125/contents.zip)
+- [jin115-20171125.zip](https://storage.googleapis.com/nardtree/jin115-20171125/jin115-20171125.zip)
+- [wakati-verbs.tar.gz](https://storage.googleapis.com/nardtree/jin115-20171125/wakati-verbs.tar.gz)
+- [wakati.tar.gz](https://storage.googleapis.com/nardtree/jin115-20171125/wakati.tar.gz)
+
 ```console
 $ wget https://storage.googleapis.com/nardtree/jin115-20171125/jin115-20171125.zip
 ```
